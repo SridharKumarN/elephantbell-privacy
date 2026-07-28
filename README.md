@@ -65,4 +65,4 @@ regardless of age.
 
 ## Contact
 
-Questions about this policy? Email pnvsridhar86@gmail.com.
+Questions about this policy? Email elephantbell.app@gmail.com.
