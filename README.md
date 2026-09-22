@@ -1,10 +1,12 @@
 # Privacy Policy — ElephantBell
 
-_Last updated: 2026-08-12_
+_Last updated: 2026-09-23_
 
-ElephantBell has no ads, no accounts, and no servers of its own. Two features use the internet,
-both optional: the map shown when picking a location, and the AI Reminder feature, which sends
-only what you choose to share to Google's Gemini AI.
+This policy covers both the ElephantBell Android app and the ElephantBell browser extension
+(Chrome/Edge). ElephantBell has no ads, no accounts, and no servers of its own. A few features
+use the internet, all optional: the map shown when picking a location, the AI Reminder feature
+(app only), which sends only what you choose to share to Google's Gemini AI, and voice input in
+the browser extension, which uses your browser's own built-in speech recognition.
 
 ## The short version
 
@@ -66,15 +68,38 @@ This information is not logged, stored, or sent anywhere.
 
 Notification permission is used only to show you the reminders you create — nothing else.
 
+## Browser Extension (ElephantBell for Chrome/Edge)
+
+The browser extension reminds you of pending personal tasks when you've spent too long on a
+site you've chosen to monitor (e.g. social media). It works entirely differently from the app
+under the hood, so its data handling is described separately here:
+
+- **Site detection:** the extension reads the URL/hostname of your currently active browser tab
+  to check it against your configured list of monitored sites, and times how long you stay
+  there. This happens entirely on your device and is never transmitted anywhere.
+- **Tasks and settings:** the tasks you add, your monitored-site list, and your reminder
+  threshold are stored only in `chrome.storage.local` (local browser storage). Uninstalling the
+  extension, or clearing that site's browsing data, deletes it.
+- **Notifications:** used only to show you a reminder for your oldest pending task once you've
+  crossed your configured threshold.
+- **Voice input (optional):** if you tap the microphone button to add a task by speaking, your
+  browser's built-in speech recognition sends the recorded audio to Google's speech-to-text
+  service to transcribe it into text. This only happens when you actively tap the mic — never
+  automatically — and is handled by the browser itself, not by any server of ours.
+
+The extension has no account sign-in, no analytics, and no backend of its own.
+
 ## Data sharing
 
-We do not share, sell, or transmit any of your data to any third party. The app has no backend
-of its own to send anything to. Its network use is: fetching map imagery from Google for the
-location picker (which can be turned off in Settings, and that request carries map tile
-coordinates, not your data), and — only when you actively use the optional AI Reminder feature —
-sending the photo/text you provide to Google's Gemini AI to extract a reminder, as described
-above. Neither of these shares your reminders, saved locations, or app-usage data; both are
-purely functional and only happen when you use that specific feature.
+We do not share, sell, or transmit any of your data to any third party. Neither the app nor the
+extension has a backend of its own to send anything to. Network use is: fetching map imagery
+from Google for the app's location picker (which can be turned off in Settings, and that request
+carries map tile coordinates, not your data); sending the photo/text you provide to Google's
+Gemini AI, only when you actively use the app's optional AI Reminder feature, to extract a
+reminder, as described above; and, only when you actively use the extension's optional voice
+input, your browser sending the recorded audio to Google's speech-to-text service to transcribe
+it. None of these share your reminders, saved locations, tasks, or app/browsing-usage data; all
+three are purely functional and only happen when you use that specific feature.
 
 ## Children's privacy
 
